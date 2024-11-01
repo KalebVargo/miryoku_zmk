@@ -71,7 +71,6 @@ jobs:
     outputs:
       board: ${{ steps.process-inputs.outputs.board }}
       shield: ${{ steps.process-inputs.outputs.shield }}
-      snippet: studio-rpc-usb-uart
       alphas: ${{ steps.process-inputs.outputs.alphas }}
       nav: ${{ steps.process-inputs.outputs.nav }}
       layers: ${{ steps.process-inputs.outputs.layers }}
@@ -91,7 +90,6 @@ jobs:
           }
           set-output "board" "${{ github.event.inputs.board }}"
           set-output "shield" "${{ github.event.inputs.shield }}"
-          set-output "snippet" "studio-rpc-usb-uart"
           set-output "alphas" "${{ github.event.inputs.alphas }}"
           set-output "nav" "${{ github.event.inputs.nav }}"
           set-output "layers" "${{ github.event.inputs.layers }}"
@@ -107,7 +105,6 @@ jobs:
     with:
       board: ${{ needs.process-inputs.outputs.board }}
       shield: ${{ needs.process-inputs.outputs.shield }}
-      snippet: studio-rpc-usb-uart
       alphas: ${{ needs.process-inputs.outputs.alphas }}
       nav: ${{ needs.process-inputs.outputs.nav }}
       layers: ${{ needs.process-inputs.outputs.layers }}
