@@ -12,9 +12,6 @@ on:
         description: 'shield'
         required: false
         default: 'default'
-      snippit:
-        description: 'snippet'
-        required: false
       alphas:
         description: 'alphas'
         required: false
